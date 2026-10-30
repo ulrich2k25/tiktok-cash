@@ -3693,24 +3693,474 @@
     }
   }
 </style>
+<style id="mobile-welcome-order">
+  .welcome-mobile-description {
+    display: none;
+  }
+
+  @media (max-width: 560px) {
+    .hero .welcome-grid {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+      margin-top: 25px;
+    }
+
+    .hero .welcome-copy {
+      display: contents;
+    }
+
+    .hero .welcome-kicker {
+      order: 0;
+      margin-bottom: 16px;
+    }
+
+    .hero .welcome-copy > h1 {
+      order: 1;
+      margin: 0 0 22px;
+    }
+
+    .hero .welcome-video {
+      order: 2;
+      width: 100%;
+      max-width: none;
+      margin: 0;
+    }
+
+    .hero .welcome-copy > .intro {
+      display: none;
+    }
+
+    .hero .welcome-mobile-description {
+      display: block;
+      order: 3;
+      margin: 20px 0 0;
+      color: #b9c6b0;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .hero .launch-clock {
+      order: 4;
+      width: 100%;
+      max-width: none;
+      margin: 22px 0 0;
+      padding-top: 17px;
+    }
+
+    .hero .clock-heading {
+      margin-bottom: 12px;
+      font-size: 10px;
+    }
+
+    .hero .clock-digits {
+      max-width: 330px;
+    }
+
+    .hero .clock-digits strong {
+      font-size: 28px;
+    }
+
+    .hero .welcome-actions {
+      order: 5;
+      display: block;
+      width: 100%;
+      margin: 24px 0 0;
+    }
+
+    .hero .welcome-actions .cta {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      min-height: 57px;
+      padding: 17px 14px;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .hero .welcome-actions .cta .arrow,
+    .hero .welcome-link {
+      display: none;
+    }
+
+    .hero .welcome-copy > .micro {
+      order: 6;
+      margin: 12px 0 0;
+      font-size: 10px;
+      text-align: center;
+    }
+  }
+</style>
+<style id="mobile-navigation-style">
+  .nav-mobile-label {
+    display: none;
+  }
+
+  @media (max-width: 560px) {
+    header.nav {
+      gap: 13px;
+      padding: 15px 5.5% 12px;
+      background: #171e19f5;
+      box-shadow: 0 8px 25px #08110a20;
+    }
+
+    header.nav .navlinks {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1.1fr;
+      width: 100%;
+      gap: 5px;
+      padding-top: 12px;
+      border-top: 1px solid #ffffff12;
+    }
+
+    header.nav .navlinks > a {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 0;
+      min-height: 44px;
+      padding: 9px 3px;
+      border: 1px solid #ffffff0d;
+      border-radius: 7px;
+      background: #ffffff04;
+      color: #b8c7ad;
+      font-size: 10px;
+      font-weight: 500;
+      line-height: 1.2;
+      text-align: center;
+      white-space: nowrap;
+      transition:
+        background .2s,
+        color .2s,
+        border-color .2s,
+        transform .15s;
+    }
+
+    header.nav .navlinks > a::after {
+      content: "";
+      position: absolute;
+      left: 30%;
+      right: 30%;
+      bottom: 4px;
+      height: 2px;
+      border-radius: 2px;
+      background: #c3f36b;
+      transform: scaleX(0);
+      transition: transform .2s ease;
+    }
+
+    header.nav .navlinks > a.is-active {
+      border-color: #c3f36b30;
+      background: #c3f36b0d;
+      color: #d9f4bb;
+    }
+
+    header.nav .navlinks > a.is-active::after {
+      transform: scaleX(1);
+    }
+
+    header.nav .navlinks > a:active {
+      transform: scale(.96);
+      background: #c3f36b18;
+    }
+
+    header.nav .navlinks > a.pill {
+      gap: 0;
+      border-color: #c3f36b;
+      background: #c3f36b;
+      color: #172015;
+      font-size: 10px;
+      font-weight: 700;
+    }
+
+    header.nav .navlinks > a.pill.is-active {
+      border-color: #e1ffb6;
+      background: #d4ff91;
+      color: #172015;
+    }
+
+    header.nav .navlinks > a.pill::after {
+      content: none;
+    }
+
+    header.nav .navlinks > a.pill:active {
+      background: #ddffa8;
+    }
+
+    header.nav .nav-desktop-label {
+      display: none;
+    }
+
+    header.nav .nav-mobile-label {
+      display: inline;
+    }
+
+    header.nav .navlinks a:focus-visible {
+      outline: 2px solid #c3f36b;
+      outline-offset: 3px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    header.nav .navlinks > a,
+    header.nav .navlinks > a::after {
+      transition: none;
+    }
+  }
+</style>
+<style id="mobile-navigation-readability">
+  @media (max-width: 560px) {
+    header.nav .navlinks {
+      grid-template-columns: 1fr 1fr 1fr 1.1fr;
+      gap: 6px;
+    }
+
+    header.nav .navlinks > a,
+    header.nav .navlinks > a.pill {
+      min-height: 48px;
+      padding: 11px 3px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    header.nav .navlinks > a.pill {
+      font-weight: 700;
+    }
+  }
+
+  @media (max-width: 360px) {
+    header.nav .navlinks {
+      gap: 4px;
+    }
+
+    header.nav .navlinks > a,
+    header.nav .navlinks > a.pill {
+      padding-inline: 2px;
+      font-size: 11px;
+    }
+  }
+</style>
+<style id="payment-button-motion">
+  :is(
+    a[href*="mychariow.shop"],
+    a.cta[href="#offre"],
+    header.nav .navlinks > a.pill[href="#offre"]
+  ) {
+    transition:
+      transform .22s ease,
+      box-shadow .22s ease,
+      background-color .22s ease,
+      border-color .22s ease !important;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    :is(
+      a[href*="mychariow.shop"],
+      a.cta[href="#offre"],
+      header.nav .navlinks > a.pill[href="#offre"]
+    ):hover {
+      transform: translateY(-4px) !important;
+      box-shadow:
+        0 9px 22px rgba(0, 0, 0, .22),
+        0 0 0 1px rgba(195, 243, 107, .15);
+    }
+  }
+
+  :is(
+    a[href*="mychariow.shop"],
+    a.cta[href="#offre"],
+    header.nav .navlinks > a.pill[href="#offre"]
+  ):active {
+    transform: translateY(1px) scale(.98) !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .15);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    :is(
+      a[href*="mychariow.shop"],
+      a.cta[href="#offre"],
+      header.nav .navlinks > a.pill[href="#offre"]
+    ) {
+      transition: none !important;
+    }
+
+    :is(
+      a[href*="mychariow.shop"],
+      a.cta[href="#offre"],
+      header.nav .navlinks > a.pill[href="#offre"]
+    ):is(:hover, :active) {
+      transform: none !important;
+    }
+  }
+</style>
+<style id="purchase-whatsapp-style">
+  #offre .purchase-whatsapp {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 13px;
+    width: 100%;
+    min-height: 60px;
+    margin-top: 14px;
+    padding: 12px 16px;
+    border: 1px solid #2db97788;
+    border-radius: 7px;
+    background: #16382b;
+    color: #dcffed;
+    text-decoration: none;
+    transition:
+      background .2s ease,
+      border-color .2s ease,
+      transform .2s ease,
+      box-shadow .2s ease;
+  }
+
+  #offre .purchase-whatsapp-icon {
+    display: grid;
+    place-items: center;
+    flex: 0 0 34px;
+    width: 34px;
+    height: 34px;
+    border-radius: 9px;
+    background: #25d3661c;
+    color: #64ed9a;
+  }
+
+  #offre .purchase-whatsapp-icon svg {
+    width: 21px;
+    height: 21px;
+  }
+
+  #offre .purchase-whatsapp-text {
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.45;
+  }
+
+  #offre .purchase-whatsapp:focus-visible {
+    outline: 2px solid #64ed9a;
+    outline-offset: 4px;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    #offre .purchase-whatsapp:hover {
+      background: #1b4937;
+      border-color: #64ed9a;
+      transform: translateY(-3px);
+      box-shadow: 0 7px 20px #0002;
+    }
+  }
+
+  #offre .purchase-whatsapp:active {
+    transform: scale(.98);
+    background: #20533f;
+  }
+
+  @media (max-width: 560px) {
+    #offre .purchase-whatsapp {
+      gap: 11px;
+      padding-inline: 12px;
+    }
+
+    #offre .purchase-whatsapp-text {
+      font-size: 12px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    #offre .purchase-whatsapp {
+      transition: none;
+    }
+
+    #offre .purchase-whatsapp:is(:hover, :active) {
+      transform: none;
+    }
+  }
+</style>
+<style id="tc-brand-style">
+header.nav .wordmark.tc-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+header.nav .tc-brand-symbol {
+  display: block;
+  width: 42px;
+  height: 54px;
+  object-fit: contain;
+  flex: 0 0 auto;
+}
+header.nav .tc-brand-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+header.nav .tc-brand-name {
+  color: #efeee8;
+  font-size: 27px;
+  line-height: 1;
+  font-weight: 750;
+  letter-spacing: -1.4px;
+}
+header.nav .tc-brand-name > span {
+  color: #c3f36b;
+}
+header.nav .tc-brand-copy small {
+  display: block;
+  margin: 0;
+  color: #c3c9be;
+  font-size: 9px;
+  line-height: 1.3;
+  letter-spacing: 3px;
+}
+@media (max-width: 560px) {
+  header.nav .wordmark.tc-brand { gap: 9px; }
+  header.nav .tc-brand-symbol { width: 33px; height: 43px; }
+  header.nav .tc-brand-name { font-size: 24px; }
+  header.nav .tc-brand-copy small {
+    font-size: 8px;
+    letter-spacing: 2.5px;
+  }
+}
+</style>
+<!-- tc-brand-meta:start -->
+<link rel="icon" type="image/svg+xml" href="img/favicon-tc.svg">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="TikTok Cash par PDG">
+<meta property="og:title" content="TikTok Cash — La formation par PDG">
+<meta property="og:description" content="Découvre la méthode de PDG : créer ton compte TikTok, comprendre la monétisation et les solutions de retrait.">
+<meta property="og:url" content="https://pdghector.com/">
+<meta property="og:image" content="https://pdghector.com/img/logo-tiktok-cash.jpg">
+<meta property="og:image:alt" content="Logo TikTok Cash par PDG">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="TikTok Cash — La formation par PDG">
+<meta name="twitter:description" content="La méthode de PDG expliquée en trois modules vidéo.">
+<meta name="twitter:image" content="https://pdghector.com/img/logo-tiktok-cash.jpg">
+<!-- tc-brand-meta:end -->
 </head>
 
   <body>
     <a class="skip" href="#contenu">Aller au contenu</a>
 
     <header class="shell nav">
-      <a class="wordmark" href="#" aria-label="TikTok Cash, accueil">
-        tiktok<span>cash.</span>
-        <small>LE STUDIO PAR PDG</small>
-      </a>
+      <a class="wordmark tc-brand" href="#" aria-label="TikTok Cash, accueil">
+  <img class="tc-brand-symbol" src="img/favicon-tc.svg" alt="" width="42" height="54">
+  <span class="tc-brand-copy">
+    <span class="tc-brand-name">tiktok<span>cash.</span></span>
+    <small>BY PDG</small>
+  </span>
+</a>
 
       <nav class="navlinks" aria-label="Navigation principale">
-        <a href="#preuves">Les résultats</a>
-        <a href="#programme">Le programme</a>
-        <a href="#questions">Questions</a>
-        <a class="pill" href="#offre">
-          Entrer dans le studio <span aria-hidden="true">↗</span>
-        </a>
+        <a href="#preuves"><span class="nav-desktop-label">Les résultats</span><span class="nav-mobile-label">Résultats</span></a>
+        <a href="#programme"><span class="nav-desktop-label">Le programme</span><span class="nav-mobile-label">Programme</span></a>
+        <a href="#questions"><span class="nav-desktop-label">Questions</span><span class="nav-mobile-label">Questions</span></a>
+        <a class="pill" href="#offre"><span class="nav-desktop-label">Entrer dans le studio <span aria-hidden="true">↗</span></span><span class="nav-mobile-label">Voir l’offre</span></a>
       </nav>
     </header>
 
@@ -3732,6 +4182,10 @@
         que regarder.<br>
         <em>Apprends à créer.</em>
       </h1>
+<p class="welcome-mobile-description">
+  PDG te montre sa méthode : créer ton compte,
+  comprendre la monétisation et les retraits.
+</p>
 
       <p class="intro">
         Découvre comment PDG développe ses comptes TikTok,
@@ -4372,10 +4826,22 @@
         >
           Accéder à la formation
         </a>
+<a
+  class="purchase-whatsapp"
+  href="https://whatsapp.com/channel/0029Vb98Soc7YSd1mt9Erj1J"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <span class="purchase-whatsapp-icon" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path d="M20.52 3.48A11.9 11.9 0 0 0 12.05 0C5.46 0 .1 5.36.1 11.95c0 2.1.55 4.16 1.6 5.98L0 24l6.22-1.63a11.94 11.94 0 0 0 5.83 1.49h.01C18.65 23.86 24 18.5 24 11.92c0-3.19-1.24-6.18-3.48-8.44ZM12.06 21.85a9.92 9.92 0 0 1-5.06-1.38l-.36-.21-3.69.97.98-3.6-.23-.37a9.89 9.89 0 0 1-1.52-5.31c0-5.47 4.45-9.92 9.93-9.92a9.86 9.86 0 0 1 7.01 2.91 9.85 9.85 0 0 1 2.9 7.01c0 5.47-4.45 9.9-9.96 9.9Zm5.45-7.42c-.3-.15-1.77-.87-2.05-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35Z"/>
+    </svg>
+  </span>
 
-        <p class="purchase-payment-note">
-          Tu seras redirigé vers Chariow pour régler ton achat.
-        </p>
+  <span class="purchase-whatsapp-text">Rejoindre la chaîne WhatsApp</span>
+</a>
+
+        
 
         <div class="purchase-methods">
           <span class="purchase-methods-label">MOYENS DE PAIEMENT</span>
@@ -4412,20 +4878,34 @@
     </div>
 
     <div class="faq-answers">
-      <details>
-        <summary>
-          Est-ce que je peux commencer sans expérience ?
-          <span class="faq-toggle" aria-hidden="true"></span>
-        </summary>
-        <p>
-          Oui, le premier module commence par la création et la
-          configuration du compte. Tu peux suivre les vidéos à ton
-          rythme. Il faudra ensuite prendre le temps d’appliquer
-          et de créer ton contenu.
-        </p>
-      </details>
+      
 
       <details>
+  <summary>
+    Est-ce que TikTok, ça marche vraiment depuis l’Afrique ?
+    <span class="faq-toggle" aria-hidden="true"></span>
+  </summary>
+  <p>
+    PDG partage dans cette formation son expérience et les résultats
+    de ses comptes depuis l’Afrique. Il explique sa façon de travailler,
+    de la configuration du compte aux retraits. Ces résultats restent
+    personnels : suivre la méthode ne garantit pas les mêmes revenus.
+  </p>
+</details>
+
+<details>
+  <summary>
+    Est-il possible de monétiser un compte TikTok depuis l’Afrique ?
+    <span class="faq-toggle" aria-hidden="true"></span>
+  </summary>
+  <p>
+    Cela dépend du programme de monétisation, de ton pays et des
+    conditions de ton compte. Les deux premiers modules expliquent
+    la configuration et les conditions d’éligibilité. La formation
+    ne rend pas automatiquement un compte éligible.
+  </p>
+</details>
+<details>
         <summary>
           La formation rend-elle mon compte automatiquement monétisé ?
           <span class="faq-toggle" aria-hidden="true"></span>
@@ -4450,19 +4930,7 @@
         </p>
       </details>
 
-      <details>
-        <summary>
-          Comment payer les 5 900 FCFA ?
-          <span class="faq-toggle" aria-hidden="true"></span>
-        </summary>
-        <p>
-          Le bouton d’achat ouvre la page de paiement Chariow.
-          Choisis parmi les moyens qui y sont proposés :
-          Orange Money, MTN Money, Wave ou carte bancaire,
-          selon leur disponibilité.
-          Le prix affiché ici correspond à un paiement unique.
-        </p>
-      </details>
+      
 
       <details>
         <summary>
@@ -4478,17 +4946,17 @@
       </details>
 
       <details>
-        <summary>
-          Les retraits vers Mobile Money sont-ils expliqués ?
-          <span class="faq-toggle" aria-hidden="true"></span>
-        </summary>
-        <p>
-          Oui, le troisième module aborde les paiements TikTok,
-          la conversion en FCFA et les solutions de transfert
-          présentées par PDG. Les options utilisables dépendent
-          de ton pays, de ton éligibilité et des prestataires disponibles.
-        </p>
-      </details>
+  <summary>
+    Comment retirer mon argent TikTok ?
+    <span class="faq-toggle" aria-hidden="true"></span>
+  </summary>
+  <p>
+    Le module 3 t’explique comment recevoir tes paiements TikTok,
+    les convertir en FCFA et utiliser les solutions de transfert
+    vers Orange Money ou MTN Money présentées par PDG.
+    Les options disponibles dépendent de ton pays et de ton compte.
+  </p>
+</details>
     </div>
   </div>
 </section>
@@ -5200,6 +5668,76 @@
   });
 
   selectModule(0);
+})();
+</script>
+<script id="mobile-navigation-script">
+(() => {
+  const header = document.querySelector("header.nav");
+  const nav = header?.querySelector(".navlinks");
+
+  if (!nav) return;
+
+  const entries = Array.from(nav.querySelectorAll('a[href^="#"]'))
+    .map(link => ({
+      link,
+      target: document.getElementById(
+        link.getAttribute("href").slice(1)
+      )
+    }))
+    .filter(entry => entry.target);
+
+  const media = window.matchMedia("(max-width: 560px)");
+  let scheduled = false;
+
+  function updateNavigation() {
+    scheduled = false;
+
+    if (!media.matches) {
+      entries.forEach(({ link }) => {
+        link.classList.remove("is-active");
+        link.removeAttribute("aria-current");
+      });
+      return;
+    }
+
+    const marker = header.getBoundingClientRect().bottom + 50;
+    let active = null;
+    let latestTop = -Infinity;
+
+    entries.forEach(entry => {
+      const top = entry.target.getBoundingClientRect().top;
+
+      if (top <= marker && top > latestTop) {
+        active = entry;
+        latestTop = top;
+      }
+    });
+
+    entries.forEach(entry => {
+      const selected = entry === active;
+
+      entry.link.classList.toggle("is-active", selected);
+
+      if (selected) {
+        entry.link.setAttribute("aria-current", "location");
+      } else {
+        entry.link.removeAttribute("aria-current");
+      }
+    });
+  }
+
+  function scheduleUpdate() {
+    if (scheduled) return;
+    scheduled = true;
+    requestAnimationFrame(updateNavigation);
+  }
+
+  window.addEventListener("scroll", scheduleUpdate, { passive: true });
+  window.addEventListener("resize", scheduleUpdate, { passive: true });
+  window.addEventListener("hashchange", scheduleUpdate);
+  media.addEventListener("change", scheduleUpdate);
+
+  updateNavigation();
 })();
 </script>
 </body>
